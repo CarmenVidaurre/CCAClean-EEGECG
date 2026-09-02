@@ -1,27 +1,30 @@
 %% CCA-based cardiac artefact removal
-%Copyright (C) 2026 Carmen Vidaurre
+% Copyright (C) 2026 Carmen Vidaurre
 
-%This program is free software: you can redistribute it and/or modify
-%it under the terms of the GNU General Public License as published by
-%the Free Software Foundation, either version 3 of the License, or
-%(at your option) any later version.
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
 
-%This program is distributed in the hope that it will be useful,
-%but WITHOUT ANY WARRANTY; without even the implied warranty of
-%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-%GNU General Public License for more details.
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+% GNU General Public License for more details.
 
-% Uses canoncorr (Statistics and Machine Learning Toolbox) together with
-% REJECT_CCA_COMPONENTS_V2.M, following Section 2(c)-(d)
-% (Eqs. 2.1-2.4) of manuscript: "Canonical Correlation Analysis and Multi-Channel...
-% Cardiography Improve Artefact Cleaning in Heartbeat-Locked Analyses".
-% C Vidaurre, M Azanova et al. 2026, Philosophical Transactions of the 
+% Uses canoncorr (Statistics and Machine Learning Toolbox) 
+% following Section 2(c)-(d)
+% (Eqs. 2.1-2.4) of manuscript: 
+% Vidaurre, C., Azanova, M., et al. Canonical Correlation Analysis and Multi-Channel...
+% Cardiography Improve Artefact Cleaning in Heartbeat-Locked Analyses. Philosophical Transactions of the 
 % Royal Society B. 
-%
+
 % CONVENTIONS:
 %   EEG_data : [time x nEEGchan]  
 %   ECG_data : [time x nECGchan]  
 %  By C. Vidaurre. Please cite our paper if you use this code.
+% Vidaurre, C., Azanova, M., et al. Canonical Correlation Analysis and Multi-Channel...
+% Cardiography Improve Artefact Cleaning in Heartbeat-Locked Analyses. Philosophical Transactions of the 
+% Royal Society B. 
 
 % --- 1. Canonical Correlation Analysis ---
 % canoncorr ranks components by descending canonical correlation
